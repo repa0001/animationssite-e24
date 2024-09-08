@@ -12,166 +12,282 @@ const images = await Astro.glob("/src/assets/images/galleri/*").then(files => {
 });
 ---
 <MainLayout title="Titel">
-		<section class="grid md:grid-cols-2 border-8 border-black lg:mt-32">		
-			<div class="">
-				<Image src={musik1} alt="Musik som levevej" class="" />
+		<section class=" animate__animated animate__zoomIn animate__delay-0.5s grid md:grid-cols-2 border-2 border-black lg:mt-32">		
+			<div class="overflow-hidden">
+				<img src="/24.jpg" alt="" class="transition-all hover:scale-125">
 			</div>
-			<div class="text-4xl p-8 grid content-center bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">					
-				<p class="pb-8">Musik som levevej</p>
-				<p class="mb-8 text-2xl">Et kursus i at blive stinkende rig som musiker - af musiker og multimillionær Jørgen Henning</p>
-				<Link variant="primary" size="medium" href="#tilmelding">Tilmeld dig til kurset!</Link>
+			<div class="text-xl p-8 grid content-center bg-gradient-to-r">					
+				<p class="pb-8 text-4xl">Københavnerbilleder - en guide til hipster foto af Sten Simons</p>
+				<p class="mb-8 text-xl">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+				<Button variant="primary" size="small">Køb nu</Button>
 			</div>
 		</section>
 
-		<section id="kurset" class="mt-32 grid lg:grid-cols-2 prose mx-auto gap-4">
+		<section id="kurset" class="mt-32 grid lg:grid-cols-2 prose mx-auto gap-4 elemtmedanimation4">
 			<article  >
-				<h2 class="text-4xl">Kort om kurset</h2>
-				<p>Musik som levevej er de danske musikeres grundkursus i at tjene penge: Kurset gennemgår alt fra at tjene penge på koncerter, musiksalg og merchandise til små svindelnumre du kan lave, når det ser allermørkest ud.</p>
+				<h2 class="text-4xl text-right">Stamdata for bogen</h2>
+				<p>.</p>
 			</article>
 			<article >
-				<h2 class="text-4xl">Hurtige facts om kurset</h2>
+			
 				<ul>
-					<li>Titel: Musik som levevej</li>
-					<li>Forfatter: Jørn Henning</li>
-					<li>Omfang: Lynkursus - weekendkursus, med diverse kursusmaterialer</li>
-					<li>Udbyder: Musikforbundet</li>
-					<li>Pris: 1200.-</li>
+					<li>Forfatter: Sten Simons</li>
+					<li>Antal sider: 344</li>
+					<li>Forlag: Mellem Linjerne</li>
+					<li>ISBN: 987-6-987654-32-1</li>
+					<li>Pris: 399.-</li>
 				</ul>
 			</article>
 		</section>
+
+		<!-- -------------------------------------------------------------------------------------------------------------------------  -->
+
+<!-- anden del -->
 		
-		<section class="mt-32 grid lg:grid-cols-3 mx-auto gap-4 items-center">
-			<div><Image src={musik2} format="webp" alt="foto" class="my-class" /></div>
-			<div><Image src={musik3} format="webp" alt="foto" class="my-class" /></div>
-			<div><Image src={musik4} format="webp" alt="foto" class="my-class" /></div>
+		<section class="mt-32 grid lg:grid-cols-3 mx-auto gap-4 items-center elemtmedanimation5">
+			<div class="my-class transition-all hover:scale-125 "><img src="/7.webp" alt=""></div>
+			<div class="my-class transition-all hover:scale-125"><img src="/8.webp" alt=""></div>
+			<div class="my-class transition-all hover:scale-125"><img src="/9.webp" alt=""></div>
 		</section>
 
-		<section class="mt-32">
-			<h2 class="text-4xl font-bold">Kursisterne siger</h2>
-			<div class="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-4">
-				<article class="prose mb-6">
-					<span class="font-bold">Godt</span>
-					<p>Jørns kursus er sjovt, og kursisterne bliver forkælet med kaffe og avec i pauserne. Jeg kunne ikke forlange mere (bort set fra lidt wienerbrød)</p>
-					<p class="italic">Sanne Tovgaard, Proletikken</p>
-				</article>
-				<article class="prose mb-6">
-					<span class="font-bold">Jeg gik glad hjem</span>
-					<p>Oplæggende er underholdende, og der er masser af sjove historier om små, snedige tricks man kan bruge til at lokke penge ud af folk. Hvad mere skal man sige om et kursus?</p>
-					<p class="italic">Kim Broggaard, muzaktilmasserne.dk</p>
-				</article>
-				<article  class="prose mb-6">
-					<span class="font-bold">Sjove anekdoter</span>
-					<p>Jørn kan det der - og han bliver bedre og bedre. Klart det bedste af Jørns kurser - De tre første var også lidt sløve, men her... Han viser han mestrer forførelsesns kunst” Tillykke - godt arbejde.</p>
-					<p class="italic">Folmer Bro, folmerbrorocks.dk</p>
-				</article>
-			</div>
-		</section>
+<!-- ------------------------------------------------------------------------------------------------------------------------  -->
 
-		<section class="mt-32" id="kursusgange">
-			<h2 class="text-4xl font-bold">Kursusgange</h2>
-			<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-8">
+
+	<section class="mt-32 elementmedanimation1" id="bogenskapitler">
+			<h2 class="text-4xl font-bold">Bogens kapitler</h2>
+			<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-8 overflow-hidden ">
 				<article class="prose">
-					<h3 class="text-xl">Kursusgang 1 - Alle kan tjene på musik</h3>
-					<p>Selvom du synger og spiller dårligt, kan du sagtens tjene penge på musik. Tænk bare på DJ Alligator - han griner stadig hele vejen til banken. </p>
+					<h3 class="text-xl">Kapitel 1 - Intro til street foto</h3>
+					<p>SHvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos. </p>
 				</article>
 				<article class="prose">
-					<h3 class="text-xl">Kapitel 2 - Spil live og tjen penge</h3>
-					<p>Koncerter er en vaskeægte pengemaskine. Udnyt det til fulde med gode kontrakter - og pas på at spillestederne ikke tager røven på dig.</p>
+					<h3 class="text-xl">Kapitel 2 - Om at skyde street</h3>
+					<p>Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet.</p>
 				</article>
 				<article class="prose">
-					<h3 class="text-xl">Kapitel 3 - Merchandisemaskineriet</h3>
-					<p>Lær at sælge t-shirts og andet unødvendigt merchandise med stor profit. Pengene sidder løst på fulde koncertgæster - det er som at stjæle slik fra børn.</p>
+					<h3 class="text-xl">Kapitel 3 - Om at finde det rette motiv</h3>
+					<p>Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.</p>
 				</article>
 				<article class="prose">
-					<h3 class="text-xl">Kapitel 4 - Svindel og humbug</h3>
-					<p>Sidste kursusgang handler om små tricks: Spil på gaden (busking), snyd med selvangivelsen, udnyttelse af venner og familie samt eventuelt bedrageri af forretningsforbindelser - intet er for fint til at overleve i en stærkt presset musikbranche</p>
+					<h3 class="text-xl">Kapitel 4 - Digital street foto</h3>
+					<p>De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto.</p>
+				</article>		
+				<article class="prose">
+					<h3 class="text-xl">Kapitel 5 - Analog street foto</h3>
+					<p>Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto.</p>
+				</article>		
+				<article class="prose">
+					<h3 class="text-xl">Kapitel 6 - Om at skyde sort/hvid</h3>
+					<p>Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering.</p>
+				</article>		
+				<article class="prose">
+					<h3 class="text-xl">Kapitel 7 - Kreative teknikker</h3>
+					<p>Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!</p>
+				</article>		
+				<article class="prose">
+					<h3 class="text-xl">Kapitel 8 - Kom helt tæt på!</h3>
+					<p>Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
 				</article>		
 			</div>
 		</section>
 
-		<section id="underviseren" class="grid lg:grid-cols-2 mt-32 max-w-3xl mx-auto gap-6"> 
-			<div>
-				<Image src={musik3} alt="Jørn henning" class="" />
+
+
+<!-- 3. del -----------------------------------------------------------------------------------------------------------------  -->
+
+		<section class="mt-32 elementmedanimation2 ">
+			<h2 class="text-4xl font-bold">Anmeldelser af bogen</h2>
+			<div class="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-4 ">
+					
+				<article class="prose mb-6">
+					<img src="/6_6.png" alt="" class="transition-all hover:scale-125">
+					<p class="text-xl">5 af 6 stjerner</p>
+					<p class="italic">Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
+					<p class="italic"> Hanne Hovgaard, Berlingeren </p>
+				</article>
+
+				<article class="prose mb-6">
+					<img src="/4_6.png" alt="" class="transition-all hover:scale-125">
+					<p class="text-xl"> 4 af 6 stjerner</p>
+					<p class="italic">Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog? </p>
+					<p class="italic"> Kim Kloggaard, Fotojournalen.dk</p>
+				</article>
+
+				<article  class="prose mb-6">
+					<img src="/6_6.png" alt="" class="transition-all hover:scale-125">
+					<p class="text-xl">6 af 6 stjerner</p>
+					<p>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
+					<p class="italic">Volmer Hansen, Lukkertiden.dk</p>
+				</article>
 			</div>
-			<article class="prose">
-				<h2 class="text-4xl">Underviseren</h2>
-				<p>Jørn Henning har en lang musik-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden med sin guitar. Senere fik han en række hits, blandt andet "Jeg har fået hikke" og "Ungdomsdruk"</p>
-				<p>Derefter tog karrieren fart: Han blev musiklærer og skrev en masse sange om dagligdagsstof, blandt andet hittet "På et møntvaskeri" og "Tutti Frutti i min fryser." </p>		
+		</section>
+
+	<!-- 6. del -----------------------------------------------------------------------------------------------------------------  -->
+
+		<section id="billederfrabogen" class="mt-32 elemtmedanimation6">
+			<h2 class="text-4xl font-bold">Billeder fra bogen</h2>
+			<div class="columns-2 lg:columns-4 overflow-hidden" >
+			
+			<section class="">
+		<img src="/1.webp" alt="" class="transition-all hover:scale-125">	
+		<img src="/20.webp" alt="" class="transition-all hover:scale-125">
+		<img src="/3_2.webp" alt="" class="transition-all hover:scale-125">
+		<img src="/3_3.webp" alt="" class="transition-all hover:scale-125">
+</section>
+
+<section class="">
+		<img src="/23.webp" alt="" class="transition-all hover:scale-125">	
+		<img src="/21.webp" alt="" class="transition-all hover:scale-125">
+		<img src="/31.webp" alt="" class="transition-all hover:scale-125">
+		<img src="/25.webp" alt="" class="transition-all hover:scale-125">
+</section>
+
+<section class="">
+		<img src="/3_1.webp" alt="" class="transition-all hover:scale-125">	
+		<img src="/27.webp" alt="" class="transition-all hover:scale-125">
+		<img src="/28.webp" alt="" class="transition-all hover:scale-125">
+		<img src="/29.webp" alt="" class="transition-all hover:scale-125">
+</section>
+			
+			</div>
+		</section>
+
+	<!-- 3. del -----------------------------------------------------------------------------------------------------------------  -->
+
+		<section id="forfatteren" class="grid lg:grid-cols-2 mt-32 max-w-3xl mx-auto gap-6 overflow-hidden elemtmedanimation7"> 
+			<div class="overflow-hidden">
+				<img src="/sten_simons.webp" alt="" class="transition-all hover:scale-125">
+			</div>
+			<article class="prose ">
+				<h2 class="text-4xl">Forfatteren</h2>
+				<p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”</p>
+				<p>Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage. </p>		
 			</article>
 		</section>
 
-		<section id="inspiration" class="mt-32">
-			<h2 class="text-4xl font-bold">Inspiration fra tidligere kurser</h2>
-			<div class="columns-2 lg:columns-4">
-			{
-				images.map(({ src }) => (
-				<div class="">
-					<img
-						src={src}
-						class="mb-4"
-						alt=""
-						loading="lazy"
-					/>
-				</div>
-				))
-			}
-			</div>
-		</section>
+	
 		<!-- tailwind form -->
-	<section  id="tilmelding" class="max-w-lg mx-auto mt-32 p-4">
-		<h2 class="text-4xl font-bold pb-4">Tilmeld dig</h2>
-		<form class="space-y-4 grid grid-cols-1 gap-6">
+	
+<form id="tilmelding" action="mt-8 max-w-md" class="elementmedanimation3">
 
-			<div class="">
-				<label for="kursusgang">Kursusgang:</label>					
-				<select name="kursusgang" id="kursusgang">
-					<option value="oktober">Oktober 2024</option>
-					<option value="december">December 2024</option>
-					<option value="februar">Februar 2025</option>
-				</select>
-			</div>
+        <div class="p-6 max-w-3xl mx-auto">
+            <label class="" for="antal">Antal:</label>
+            
+            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="number" id="antal" placeholder="1">
+            <!-- <input class="mt-1 block focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="number" id="antal" placeholder="1"> -->
+        </div>
 
-			<div class="">
-				<span>Betaling:</span>
-				<input type="radio" id="forud" name="levering" checked="checked">
-				<label for="forud">Forudbetaling</label>
-				<input type="radio" id="kredit" name="levering">
-				<label for="kredit">Kredit</label>
-				<input type="radio" id="kontant" name="levering">
-				<label for="kontant">Kontant</label>
-				
-			</div>
-		
-			<div class="grid gap-3">
-				<label for="navn">Navn:</label>
-				<input type="text" id="navn" name="navn" placeholder="Anders And">
-			</div>
+        <div class="p-6 max-w-3xl mx-auto">
+            <span class="text-gray-700">Levering:</span>
+            <input class="rounded-md  border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="radio" id="postnord" name="levering" checked="checked">
+            <label for="postnord"> Postnord </label>
+            <input class=" rounded-md  border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="radio" id="afhenter" name="levering">
+            <label for="afhent">Afhent selv</label>
+        </div>
 
-			<div class="grid gap-3">
-				<label for="adresse">Adresse:</label>
-				<input type="text" id="adresse" name="adresse" placeholder="Paradisæblevej 8">
-			</div>
+      <div class="p-6 max-w-3xl mx-auto text-gray-700">
+            <label class="text-gray-700" for="navn">Navn:</label>
+            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="navn" placeholder="Anders And">
+        </div>
 
-			<div class="grid gap-3 grid-cols-6">
-				<label for="postnummer" class="col-span-6">Postnummer & by:</label>
-				<input type="text" id="postnummer" name="postnummer" class="col-span-2" placeholder="0900">
-				<input type="text" id="bynavn" name="bynavn" disabled class="col-span-4" placeholder="Andeby C">
-			</div>
+        <div class="p-6 max-w-3xl mx-auto">
+            <label class="" for="adresse">Adresse:</label>
+            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="adresse" placeholder="Paradisæblevej 8">
+        </div>
 
-			<div class="grid gap-3">
-				<label for="telefon">Telefon:</label>
-				<input type="tel" id="telefon" name="telefon" placeholder="555-555">
-			</div>
+        <div class="p-6 max-w-3xl mx-auto">
+            <label for="e-mail">E-mail:</label>
+            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="email" id="e-mail" placeholder="Anders@andeby.dk">
+        </div>
 
-			<div class="">
-				<input type="checkbox" id="nyhedsbrev" name="nyhedsbrev">
-				<label for="nyhedsbrev">Ja tak til nyhedsbreve og tilbud</label>
-			</div>
+        <div class="p-6 max-w-3xl mx-auto">
+            <label for="postnummer og by">Postnummer & By:</label>
+            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="postnummer" placeholder="0900">
+            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="text" id="by" placeholder="Andeby">
+        </div>
 
-			<div class="flex justify-end">
-				<Button variant="primary" size="medium">Til betaling</Button>
-			</div>
-		</form>
-	</section>
+        <div class="block p-6 max-w-3xl mx-auto">
+            <label class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" for="telefon">Telefon:</label>
+            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="tel" id="telefon" placeholder="555-555">
+        </div>
+
+        <div class=" block p-6 max-w-3xl mx-auto">
+            <input class="rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="checkbox" id="postnord" name="Levering" checked="checked">
+            <label for="postnord"> Ja tak til nyheder og tilbud </label>
+        </div>
+    </form>
+
+    	<article class="p-6 max-w-3xl mx-auto ">
+		<Button variant="primary" size="small">Forsæt</Button>
+		<p class="mt-1 block w-full">Link til 
+            <Link href="https://www.kea.dk" target="_blank">Bog & ide</Link></p>
+	</article>
+
+
 	<!-- tailwind form slut -->
 </MainLayout>
+
+<script>
+
+import { inView } from "motion";
+
+ 
+
+const elementmedanimation1 = document.querySelector(".elementmedanimation1");
+
+inView(elementmedanimation1, () => {
+
+elementmedanimation1.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+
+}); 
+
+ 
+
+const elementmedanimation2 = document.querySelector(".elementmedanimation2");
+
+inView(elementmedanimation2, () => {
+
+elementmedanimation2.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+
+}); 
+
+const elementmedanimation3 = document.querySelector(".elementmedanimation3");
+
+inView(elementmedanimation3, () => {
+
+elementmedanimation3.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+
+}); 
+
+
+const elementmedanoamtion4 = document.querySelector(".elemtmedanimation4");
+
+inView(elementmedanoamtion4, () => {
+
+	elementmedanoamtion4.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+});
+
+const elementmedanoamtion5 = document.querySelector(".elemtmedanimation5");
+
+inView(elementmedanoamtion5, () => {
+
+	elementmedanoamtion5.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+});
+
+const elementmedanoamtion6 = document.querySelector(".elemtmedanimation6");
+
+inView(elementmedanoamtion6, () => {
+
+	elementmedanoamtion6.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+});
+
+
+const elementmedanoamtion7 = document.querySelector(".elemtmedanimation7");
+
+inView(elementmedanoamtion7, () => {
+
+	elementmedanoamtion7.classList.add("animate__animated", "animate__fadeIn", "animate__delay-1s");
+});
+
+
+</script>

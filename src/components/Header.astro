@@ -4,13 +4,13 @@ import Link from '../components/Link.astro'
 <div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full z-10 bg-white" >
 <div id="navbar" class="flex flex-row justify-between">
 <div id="logo" class="">
-<a href="#navbar" class="">Musik som levevej</a>
+<a href="#navbar" class="">Københavnerbilleder - <br> en guide til hipster foto</a>
 </div>
 <nav id="desktopmenu" class="hidden lg:block">
 <ul class="flex flex-row gap-4">
-<li class=""><Link href="#kursusgange" >Kursusgange</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-<li class=""><Link href="#underviseren" >Underviseren</Link></li>
-<li class=""><Link href="#inspiration" >Inspiration</Link></li>
+<li class=""><Link href="#bogenskapitler" >Bogens kapitler</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+<li class=""><Link href="#forfatteren" >Forfatteren</Link></li>
+<li class=""><Link href="#billederfrabogen" >Billeder fra bogen</Link></li>
 <li class=""><Link href="#tilmelding" >Tilmelding</Link></li>
 </ul>
 </nav>
@@ -19,9 +19,9 @@ import Link from '../components/Link.astro'
 <nav id="mobilmenu" class="flex flex-col content-center pt-4" 
 x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
 <ul >
-    <li class=""><Link href="#kursusgange" >Kursusgange</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-    <li class=""><Link href="#underviseren" >Underviseren</Link></li>
-    <li class=""><Link href="#inspiration" >Inspiration</Link></li>
+    <li class=""><Link href="#bogenskapitler" >Bogens kapitler</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+    <li class=""><Link href="#forfatteren" >Forfatteren</Link></li>
+    <li class=""><Link href="#billederfrabogen" >Billeder fra bogen</Link></li>
     <li class=""><Link href="#tilmelding" >Tilmelding</Link></li>
 </ul>
 </nav>
